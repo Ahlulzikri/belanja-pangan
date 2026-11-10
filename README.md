@@ -1,132 +1,208 @@
-# Sistem Informasi Manajemen Belanja dan Pengendalian Biaya Bahan Pangan
-
-**Berbasis Web Menggunakan Metode Weighted Product (WP)**
+# SISTEM INFORMASI MANAJEMEN BELANJA DAN PENGENDALIAN BIAYA BAHAN PANGAN BERBASIS WEB MENGGUNAKAN METODE WEIGHTED PRODUCT (WP)
 
 ## 1. Deskripsi Proyek
 
-Sistem Informasi Manajemen Belanja dan Pengendalian Biaya Bahan Pangan merupakan aplikasi berbasis web yang dikembangkan menggunakan framework Laravel dan database MySQL. Aplikasi ini bertujuan membantu pengguna mengelola data bahan pangan, memantau stok, mencatat harga, serta menentukan peringkat prioritas bahan pangan berdasarkan metode Weighted Product (WP).
+Sistem Informasi Manajemen Belanja dan Pengendalian Biaya Bahan Pangan merupakan aplikasi berbasis web yang dikembangkan menggunakan framework Laravel 12 dan database MySQL.
 
-Proyek ini dibuat untuk memenuhi tugas mata kuliah Proyek Perangkat Lunak.
+Aplikasi ini dirancang untuk membantu pengguna dalam mengelola data bahan pangan, mencatat harga, memantau ketersediaan stok, serta menentukan prioritas belanja berdasarkan metode Weighted Product (WP).
 
-## 2. Tujuan
+Dengan adanya aplikasi ini, proses pengelolaan bahan pangan diharapkan menjadi lebih terstruktur. Pengguna juga dapat melihat hasil perhitungan dan peringkat bahan pangan sebagai bahan pertimbangan dalam menentukan prioritas pembelian.
+
+Proyek ini dikembangkan secara berkelompok untuk memenuhi tugas mata kuliah Proyek Perangkat Lunak.
+
+## 2. Tujuan Pengembangan
+
+Tujuan dari pengembangan aplikasi ini adalah:
 
 - Mempermudah pengelolaan data bahan pangan.
-- Membantu pengguna memantau stok dan kebutuhan bahan pangan.
-- Menerapkan metode Weighted Product (WP) dalam pengambilan keputusan.
-- Mengembangkan aplikasi berbasis web menggunakan Laravel dan MySQL.
-- Menerapkan kolaborasi pengembangan perangkat lunak menggunakan GitHub.
+- Membantu pengguna mencatat harga dan jumlah stok.
+- Memantau kebutuhan bahan pangan.
+- Membantu menentukan prioritas belanja menggunakan metode Weighted Product.
+- Menyediakan hasil perhitungan yang dapat digunakan sebagai bahan pertimbangan pengambilan keputusan.
+- Menerapkan pengembangan aplikasi berbasis web menggunakan Laravel dan MySQL.
+- Melatih kerja sama tim melalui penggunaan Git dan GitHub.
 
 ## 3. Fitur Aplikasi
 
-1. **Login dan Logout** untuk mengatur akses pengguna.
-2. **Dashboard** untuk menampilkan ringkasan data bahan pangan.
-3. **Manajemen Data Bahan Pangan (CRUD)** untuk menambah, melihat, mengubah, dan menghapus data.
-4. **Pengelolaan Harga dan Stok** untuk mencatat harga, satuan, stok tersedia, dan kebutuhan bahan pangan.
-5. **Perhitungan Weighted Product (WP)** untuk menghitung nilai preferensi berdasarkan kriteria dan bobot.
-6. **Peringkat Bahan Pangan** untuk menampilkan urutan hasil perhitungan metode WP.
+Aplikasi ini dirancang dengan beberapa fitur utama sebagai berikut:
+
+1. **Login dan Logout**  
+   Digunakan untuk mengatur akses pengguna ke dalam aplikasi.
+
+2. **Dashboard**  
+   Menampilkan ringkasan informasi dan data bahan pangan.
+
+3. **Manajemen Data Bahan Pangan (CRUD)**  
+   Memungkinkan pengguna menambah, melihat, mengubah, dan menghapus data bahan pangan.
+
+4. **Pengelolaan Harga dan Stok**  
+   Digunakan untuk mencatat harga, satuan, stok tersedia, dan jumlah kebutuhan bahan pangan.
+
+5. **Perhitungan Weighted Product (WP)**  
+   Mengolah data bahan pangan berdasarkan kriteria dan bobot yang telah ditentukan.
+
+6. **Hasil Perangkingan**  
+   Menampilkan urutan prioritas bahan pangan berdasarkan nilai preferensi metode WP.
 
 ## 4. Teknologi yang Digunakan
 
-- PHP
-- Laravel 12
-- MySQL
-- HTML dan CSS
-- Blade Template Engine
-- Git dan GitHub
-- XAMPP
+Berikut teknologi yang digunakan dalam pengembangan aplikasi:
 
-## 5. Metode Weighted Product (WP)
-
-Weighted Product (WP) merupakan metode pengambilan keputusan yang menggunakan perkalian nilai kriteria dengan bobot yang telah ditentukan.
-
-Kriteria awal yang digunakan dalam aplikasi:
-
-| Kriteria | Jenis | Bobot |
-|---|---|---:|
-| Harga bahan pangan | Cost | 40% |
-| Kebutuhan belanja | Benefit | 60% |
-| **Total** | | **100%** |
-
-Rumus nilai vektor S:
-
-`Sᵢ = Hargaᵢ⁻⁰·⁴⁰ × Kebutuhanᵢ⁰·⁶⁰`
-
-Rumus nilai preferensi V:
-
-`Vᵢ = Sᵢ / ΣS`
-
-Nilai preferensi digunakan untuk menentukan peringkat setiap alternatif. Hasilnya bergantung pada data, kriteria, dan bobot yang digunakan.
-
-**Catatan:** Kriteria dan bobot tersebut merupakan konfigurasi awal aplikasi. Peringkat WP tidak secara otomatis menunjukkan kekurangan stok, sehingga interpretasi hasil perlu disesuaikan dengan kebutuhan belanja yang sebenarnya.
-
-## 6. Struktur Data
-
-Data bahan pangan memiliki atribut berikut:
-
-| Atribut | Keterangan |
+| Teknologi | Kegunaan |
 |---|---|
-| `id` | Identitas data bahan pangan |
-| `nama_bahan` | Nama bahan pangan |
-| `kategori` | Kategori bahan pangan |
-| `satuan` | Satuan bahan pangan |
-| `harga` | Harga per satuan |
-| `stok` | Jumlah stok tersedia |
-| `kebutuhan` | Jumlah kebutuhan bahan pangan |
+| PHP | Bahasa pemrograman backend |
+| Laravel 12 | Framework pengembangan aplikasi |
+| MySQL | Pengelolaan database |
+| HTML | Membuat struktur halaman |
+| CSS | Mengatur tampilan aplikasi |
+| Blade Template | Mengelola tampilan Laravel |
+| Git | Mengelola versi kode program |
+| GitHub | Menyimpan dan mengembangkan proyek bersama |
+| XAMPP | Menjalankan server lokal dan MySQL |
+
+## 5. Metode Pengambilan Keputusan Weighted Product (WP)
+
+Weighted Product (WP) merupakan salah satu metode Sistem Pendukung Keputusan (SPK) yang digunakan untuk menentukan peringkat alternatif berdasarkan beberapa kriteria dengan bobot tertentu.
+
+Dalam aplikasi ini, metode WP digunakan untuk membantu menentukan prioritas belanja bahan pangan berdasarkan harga dan jumlah kebutuhan.
+
+### 5.1 Kriteria dan Bobot
+
+Kriteria yang digunakan dalam perhitungan awal adalah:
+
+| No. | Kriteria | Jenis | Bobot |
+|---|---|---|---|
+| 1 | Harga bahan pangan | Cost | 40% |
+| 2 | Kebutuhan belanja | Benefit | 60% |
+| | **Total** | | **100%** |
+
+Keterangan:
+
+- **Cost:** Semakin rendah nilai harga, semakin baik.
+- **Benefit:** Semakin tinggi jumlah kebutuhan, semakin baik.
+
+Bobot digunakan untuk menunjukkan tingkat kepentingan masing-masing kriteria dalam proses perhitungan.
+
+### 5.2 Rumus Vektor S
+
+Rumus yang digunakan untuk menghitung nilai vektor S adalah:
+
+Sᵢ = ∏ (Xᵢⱼ)ʷʲ
+
+Untuk dua kriteria pada aplikasi ini, rumusnya menjadi:
+
+Sᵢ = Hargaᵢ⁻⁰·⁴⁰ × Kebutuhanᵢ⁰·⁶⁰
+
+Keterangan:
+
+- Sᵢ = Nilai vektor S setiap alternatif.
+- Xᵢⱼ = Nilai alternatif berdasarkan kriteria.
+- Wⱼ = Bobot masing-masing kriteria.
+- Harga = Nilai harga bahan pangan.
+- Kebutuhan = Jumlah kebutuhan bahan pangan.
+
+### 5.3 Rumus Vektor V
+
+Setelah nilai vektor S diperoleh, langkah selanjutnya adalah menghitung nilai preferensi menggunakan rumus:
+
+Vᵢ = Sᵢ / ΣSᵢ
+
+Keterangan:
+
+- Vᵢ = Nilai preferensi setiap alternatif.
+- Sᵢ = Nilai vektor S setiap alternatif.
+- ΣSᵢ = Jumlah seluruh nilai vektor S.
+
+### 5.4 Hasil Perangkingan
+
+Nilai preferensi yang diperoleh digunakan untuk menentukan peringkat setiap bahan pangan.
+
+Semakin tinggi nilai preferensi, semakin tinggi pula prioritas alternatif berdasarkan kriteria dan bobot yang digunakan.
+
+**Catatan:** Bobot dan kriteria tersebut merupakan konfigurasi awal yang digunakan dalam proyek. Hasil perangkingan menunjukkan prioritas berdasarkan harga dan kebutuhan, bukan secara otomatis menunjukkan bahan pangan yang stoknya paling sedikit. Data harga dan kebutuhan juga harus bernilai positif agar dapat diproses menggunakan rumus WP.
+
+## 6. Struktur Data Bahan Pangan
+
+Data bahan pangan yang dikelola dalam aplikasi memiliki beberapa atribut sebagai berikut:
+
+| No. | Atribut | Keterangan |
+|---|---|---|
+| 1 | id | Identitas setiap data bahan pangan |
+| 2 | nama_bahan | Nama bahan pangan |
+| 3 | kategori | Jenis atau kelompok bahan pangan |
+| 4 | satuan | Satuan bahan pangan |
+| 5 | harga | Harga bahan pangan per satuan |
+| 6 | stok | Jumlah stok yang tersedia |
+| 7 | kebutuhan | Jumlah kebutuhan bahan pangan |
+
+Data tersebut digunakan untuk membantu proses pengelolaan bahan pangan dan perhitungan prioritas menggunakan metode Weighted Product.
 
 ## 7. Persyaratan Sistem
 
-Sebelum menjalankan aplikasi, siapkan:
+Sebelum menjalankan aplikasi, pastikan perangkat telah memiliki beberapa kebutuhan berikut:
 
-- PHP yang kompatibel dengan Laravel 12
-- Composer
-- MySQL atau XAMPP
-- Git           
-- Browser web
+- PHP versi 8.2 atau lebih baru yang kompatibel dengan Laravel 12.
+- Composer.
+- MySQL.
+- XAMPP.
+- Git.
+- Visual Studio Code atau editor kode lainnya.
+- Browser seperti Google Chrome atau Microsoft Edge.
 
-## 8. Cara Instalasi
+## 8. Cara Instalasi dan Menjalankan Aplikasi
+
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi di komputer lokal.
 
 ### A. Clone Repository
 
+Buka terminal atau CMD, kemudian jalankan perintah:
+
 ```bash
-git clone https://github.com/rafafahlevi1406-beep/NAMA-REPOSITORY.git
-cd NAMA-REPOSITORY
+git clone https://github.com/rafafahlevi1406-beep/belanja-pangan.git
 ```
 
-Ganti `NAMA-REPOSITORY` dengan nama repository proyek yang sebenarnya.
+Masuk ke direktori proyek:
+
+```bash
+cd belanja-pangan
+```
 
 ### B. Instal Dependensi
+
+Jalankan perintah berikut untuk menginstal seluruh dependensi Laravel:
 
 ```bash
 composer install
 ```
 
-### C. Konfigurasi Environment
+### C. Konfigurasi File Environment
 
-Salin file `.env.example` menjadi `.env`.
+Salin file `.env.example` menjadi `.env` menggunakan perintah:
 
-Untuk Windows Command Prompt:
-
-```bat
+```bash
 copy .env.example .env
 ```
 
-Buat application key:
+Kemudian buat application key:
 
 ```bash
 php artisan key:generate
 ```
 
-### D. Buat Database
+### D. Membuat Database
 
-Jalankan MySQL melalui XAMPP, kemudian buat database:
+1. Buka XAMPP.
+2. Jalankan Apache dan MySQL.
+3. Buka phpMyAdmin melalui browser.
+4. Buat database baru dengan nama:
 
-```sql
-CREATE DATABASE db_belanja_pangan;
+```text
+db_belanja_pangan
 ```
 
-Atur konfigurasi database dalam file `.env`:
+Selanjutnya, buka file `.env` pada folder proyek dan sesuaikan konfigurasi database:
 
-```dotenv
+```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -135,70 +211,105 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Sesuaikan username dan password dengan konfigurasi MySQL masing-masing.
+Sesuaikan username dan password berdasarkan konfigurasi MySQL pada komputer masing-masing.
 
-### E. Jalankan Migrasi
+### E. Menjalankan Migrasi Database
+
+Jalankan perintah berikut untuk membuat tabel database berdasarkan file migration:
 
 ```bash
 php artisan migrate
 ```
 
-### F. Jalankan Aplikasi
+### F. Menjalankan Aplikasi
+
+Setelah seluruh proses konfigurasi selesai, jalankan:
 
 ```bash
 php artisan serve
 ```
 
-Buka browser dan akses:
+Kemudian buka browser dan akses alamat berikut:
 
-`http://127.0.0.1:8000`
+http://127.0.0.1:8000
 
-**Catatan:** Akun login harus dibuat atau disediakan sesuai konfigurasi autentikasi proyek.
+**Catatan:** Jika aplikasi menggunakan autentikasi, pastikan akun pengguna telah tersedia melalui proses registrasi, seeder, atau mekanisme pembuatan akun yang disediakan proyek.
 
 ## 9. Tim Pengembang
 
+Proyek ini dikembangkan oleh tiga mahasiswa dengan pembagian tanggung jawab sebagai berikut:
+
 | No. | Nama Anggota | Tanggung Jawab |
 |---|---|---|
-| 1 | MUHAMMAD RAFFAIL FAHLEVI | Pengembangan aplikasi Laravel, pengelolaan database, dan implementasi metode Weighted Product (WP). |
-| 2 | FAJARUL AKBAR | Pengembangan fitur aplikasi, pengujian sistem, dan dokumentasi proyek. |
+| 1 | MUHAMMAD RAFFAIL FAHLEVI | Mengembangkan struktur proyek Laravel, mengelola database MySQL, membuat migration dan model, serta mengembangkan fitur CRUD bahan pangan. |
+| 2 | ANSAR SALSARAJA | Mengimplementasikan metode Weighted Product (WP), mengembangkan perhitungan nilai vektor S dan V, serta membuat fitur perangkingan bahan pangan. |
+| 3 | AHLUL ZIKRI | Mengembangkan dashboard dan antarmuka aplikasi, membantu pengujian sistem, serta melakukan penyempurnaan tampilan dan dokumentasi. |
 
-Pembagian tanggung jawab tersebut merupakan pembagian awal dan perlu disesuaikan dengan pekerjaan yang benar-benar dilakukan oleh setiap anggota.
+### Profil GitHub Anggota
 
-Setiap anggota wajib menggunakan akun GitHub masing-masing untuk berkontribusi dalam pengembangan proyek.
+- **Muhammad Raffail Fahlevi:** https://github.com/rafafahlevi1406-beep
+- **Ansar Salsaraja:** https://github.com/ansarsalsaraja123-source
+- **Ahlul Zikri:** https://github.com/Ahlulzikri
+
+Setiap anggota memiliki tanggung jawab sesuai pembagian tugas dan diharapkan berkontribusi menggunakan akun GitHub masing-masing.
+
+Riwayat pengembangan dan kontribusi anggota dapat dilihat melalui aktivitas commit pada repository proyek.
 
 ## 10. Repository GitHub
 
-Repository proyek:
+Repository utama proyek:
 
-https://github.com/rafafahlevi1406-beep/NAMA-REPOSITORY
+https://github.com/rafafahlevi1406-beep/belanja-pangan
 
-Ganti tautan tersebut dengan alamat repository proyek yang sebenarnya.
+GitHub digunakan sebagai tempat penyimpanan kode sumber, dokumentasi, dan pengelolaan versi aplikasi.
+
+Melalui repository ini, seluruh anggota kelompok dapat bekerja sama dalam mengembangkan aplikasi, memperbarui kode program, dan melihat riwayat perubahan yang dilakukan oleh masing-masing anggota.
 
 ## 11. Pengujian Sistem
 
-Pengujian dilakukan untuk memastikan fitur aplikasi berjalan sesuai kebutuhan, meliputi:
+Pengujian dilakukan untuk mengetahui apakah setiap fitur aplikasi telah berjalan sesuai dengan kebutuhan yang direncanakan.
+
+Beberapa bagian yang menjadi fokus pengujian meliputi:
 
 1. Pengujian login dan logout.
-2. Pengujian tambah, tampil, edit, dan hapus data bahan pangan.
-3. Pengujian penyimpanan harga, stok, dan kebutuhan.
-4. Pengujian perhitungan nilai S dan nilai V.
-5. Pengujian urutan peringkat hasil WP.
-6. Pengujian validasi input dan penanganan data yang tidak valid.
+2. Pengujian penambahan data bahan pangan.
+3. Pengujian tampilan daftar bahan pangan.
+4. Pengujian perubahan data bahan pangan.
+5. Pengujian penghapusan data bahan pangan.
+6. Pengujian penyimpanan harga, stok, dan kebutuhan.
+7. Pengujian proses perhitungan vektor S.
+8. Pengujian proses perhitungan vektor V.
+9. Pengujian hasil perangkingan metode WP.
+10. Pengujian validasi data yang dimasukkan pengguna.
+
+Hasil pengujian dicatat berdasarkan proses pengujian yang benar-benar dilakukan selama pengembangan aplikasi.
 
 ## 12. Pengembangan Selanjutnya
 
-- Penyempurnaan kriteria dan bobot metode WP.
-- Penambahan analisis kekurangan stok.
-- Penyempurnaan laporan hasil perhitungan.
-- Pengujian dengan berbagai variasi data.
-- Peningkatan dokumentasi dan kolaborasi GitHub.
+Aplikasi ini masih dapat dikembangkan dengan menambahkan beberapa kemampuan, antara lain:
+
+- Penambahan kriteria penilaian pada metode Weighted Product.
+- Pengaturan bobot kriteria secara dinamis.
+- Penambahan fitur analisis kekurangan stok.
+- Penyediaan laporan hasil perhitungan.
+- Pengujian menggunakan lebih banyak variasi data.
+- Peningkatan keamanan dan pengelolaan hak akses pengguna.
+- Penyempurnaan tampilan agar lebih mudah digunakan.
+- Peningkatan dokumentasi dan kolaborasi melalui GitHub.
 
 ## 13. Referensi
 
-- Dokumentasi Laravel 12: https://laravel.com/docs/12.x
-- Dokumentasi MySQL: https://dev.mysql.com/doc/
-- Dokumentasi GitHub: https://docs.github.com/
+1. Laravel Documentation. https://laravel.com/docs/12.x
+2. MySQL Documentation. https://dev.mysql.com/doc/
+3. Git Documentation. https://git-scm.com/doc
+4. GitHub Documentation. https://docs.github.com/
 
 ---
 
-Proyek ini dikembangkan untuk keperluan pembelajaran dan memenuhi tugas mata kuliah Proyek Perangkat Lunak.
+**Penutup**
+
+Sistem Informasi Manajemen Belanja dan Pengendalian Biaya Bahan Pangan Berbasis Web Menggunakan Metode Weighted Product (WP) merupakan proyek pengembangan aplikasi yang bertujuan membantu pengelolaan data bahan pangan dan menentukan prioritas belanja berdasarkan kriteria tertentu.
+
+Melalui proyek ini, anggota kelompok dapat menerapkan pengetahuan mengenai pemrograman web, pengelolaan database, metode Sistem Pendukung Keputusan, serta kolaborasi pengembangan perangkat lunak menggunakan Git dan GitHub.
+
+Proyek ini dikembangkan sebagai bagian dari pemenuhan tugas mata kuliah Proyek Perangkat Lunak.
